@@ -1,5 +1,4 @@
 <template>
-  <Analytics />
   <div class="min-h-dvh bg-zinc-950 text-zinc-50">
     <div
       class="mx-auto flex min-h-dvh w-full max-w-6xl flex-col px-4 sm:px-6 lg:px-8"
@@ -29,7 +28,9 @@
           <h1 class="text-4xl font-semibold tracking-tight sm:text-5xl">
             Portfolio
           </h1>
-          <p class="mt-4 max-w-2xl text-zinc-300">Каркас.</p>
+          <p class="mt-4 max-w-2xl text-zinc-300">
+            Каркас готов. Дальше — секции и вау-анимации.
+          </p>
         </section>
       </main>
 
@@ -55,6 +56,4 @@
   </div>
 </template>
 
-<script setup lang="ts">
-import { Analytics } from "@vercel/analytics/vue";
-</script>
+<script setup lang="ts"></script>
