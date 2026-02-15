@@ -3,10 +3,10 @@ import vue from "@vitejs/plugin-vue";
 import { resolve } from "path";
 import tailwindcss from "@tailwindcss/vite";
 
-export default defineConfig(({ mode }) => ({
+export default defineConfig(() => ({
   plugins: [vue(), tailwindcss()],
 
-  base: mode === "production" ? "/portfolio-landing/" : "/",
+  base: process.env.VITE_BASE ?? "/",
 
   resolve: {
     alias: {
