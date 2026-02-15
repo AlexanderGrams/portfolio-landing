@@ -28,9 +28,7 @@
           <h1 class="text-4xl font-semibold tracking-tight sm:text-5xl">
             Portfolio
           </h1>
-          <p class="mt-4 max-w-2xl text-zinc-300">
-            Каркас готов. Дальше — секции и вау-анимации.
-          </p>
+          <p class="mt-4 max-w-2xl text-zinc-300">Каркас.</p>
         </section>
       </main>
 
