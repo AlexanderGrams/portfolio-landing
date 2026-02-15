@@ -1,4 +1,5 @@
 <template>
+  <Analytics />
   <div class="min-h-dvh bg-zinc-950 text-zinc-50">
     <div
       class="mx-auto flex min-h-dvh w-full max-w-6xl flex-col px-4 sm:px-6 lg:px-8"
@@ -54,4 +55,6 @@
   </div>
 </template>
 
-<script setup lang="ts"></script>
+<script setup lang="ts">
+import { Analytics } from "@vercel/analytics/vue";
+</script>
