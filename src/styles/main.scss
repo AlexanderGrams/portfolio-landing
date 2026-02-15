@@ -1,0 +1,40 @@
+// Подключение шрифтов
+@use "./base/fonts";
+// Нормализация стилей
+@use "./base/normalize";
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+
+  /* важное: чтобы “черный сайт” был реально черным везде */
+  background: #09090b; /* zinc-950 */
+  color: #fafafa; /* почти white */
+
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* якоря (под высоту хедера). потом просто поменяешь значение */
+:root {
+  --header-offset: 80px;
+  scroll-behavior: smooth;
+  scroll-padding-top: var(--header-offset);
+}
+
+/* если будет много анимаций — обязательно */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  ::before,
+  ::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
