@@ -6,10 +6,8 @@
 
 .page__hero {
   min-height: 100dvh;
-  background:
-    radial-gradient(circle at top right, rgba(14, 116, 144, 0.28), transparent 45%),
-    radial-gradient(circle at top left, rgba(63, 63, 70, 0.36), transparent 50%),
-    linear-gradient(180deg, var(--color-bg) 0%, var(--color-surface) 100%);
+  background: -webkit-linear-gradient(130deg, #0b0b10, #200b0b);
+  background: linear-gradient(130deg, #0b0b10, #200b0b);
 }
 
 .page__container {
