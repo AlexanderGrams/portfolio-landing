@@ -1,0 +1,26 @@
+﻿.hero-section {
+  min-height: calc(100dvh - 88px);
+  display: flex;
+  align-items: center;
+  padding-bottom: 64px;
+}
+
+.hero-section__content {
+}
+
+.hero-section__title {
+  margin: 0;
+  font-family: var(--font-heading);
+  font-weight: 600;
+  font-size: 88px;
+  line-height: 118%;
+  letter-spacing: 0.03em;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.hero-section__subtitle {
+  margin-top: 16px;
+  margin-bottom: 0;
+  font-size: 1rem;
+  color: var(--color-text-muted);
+}

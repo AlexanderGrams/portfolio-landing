@@ -1,0 +1,29 @@
+﻿:root {
+  --font-ui: "Inter", "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+  --font-heading: "Unbounded", "Trebuchet MS", "Segoe UI", sans-serif;
+  --font-accent: "Unbounded", "Trebuchet MS", "Segoe UI", sans-serif;
+  --font-mono: "JetBrains Mono", "Fira Code", Consolas, monospace;
+
+  --color-bg: #1d1d1f;
+  --color-surface: #111827;
+  --color-text: #ffffff;
+  --color-text-muted: #ffffffb3;
+  --color-border: #ffffff1a;
+
+  --content-max-width: 1440px;
+  --space-page-x: 16px;
+  --space-section-y: 64px;
+  --header-offset: 80px;
+}
+
+@media (min-width: 640px) {
+  :root {
+    --space-page-x: 24px;
+  }
+}
+
+@media (min-width: 1024px) {
+  :root {
+    --space-page-x: 32px;
+  }
+}

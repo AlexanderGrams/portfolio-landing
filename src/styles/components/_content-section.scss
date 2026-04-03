@@ -1,0 +1,17 @@
+﻿.content-section {
+  padding-top: var(--space-section-y);
+  padding-bottom: var(--space-section-y);
+}
+
+.content-section__title {
+  margin: 0;
+  font-family: var(--font-heading);
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+.content-section__text {
+  margin-top: 12px;
+  margin-bottom: 0;
+  color: var(--color-text-muted);
+}

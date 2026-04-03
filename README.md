@@ -1,15 +1,14 @@
-# Portfolio Landing
+﻿# Portfolio Landing
 
 Сайт-визитка (портфолио) продуктового дизайнера на Vue 3 + TypeScript + Vite.
-Сейчас это каркас с базовой структурой секций и стилями.
+Сейчас это базовый каркас с секциями и стилями на SCSS (БЭМ).
 
 ## Stack
 
 - Vue 3 (`<script setup>`)
 - TypeScript
 - Vite
-- Tailwind CSS 4
-- SCSS
+- SCSS (BEM)
 
 ## Scripts
 
@@ -30,9 +29,12 @@ CI перед деплоем запускает:
 2. `npm run typecheck`
 3. `npm run build` (с `VITE_BASE=/portfolio-landing/`)
 
-## Где менять контент
+## Структура UI и стилей
 
-- Основная структура страницы: [src/App.vue](src/App.vue)
-- Глобальные стили: [src/styles/main.scss](src/styles/main.scss)
-- Tailwind import: [src/styles/tailwind.css](src/styles/tailwind.css)
+- Страница-компоновка: [src/App.vue](src/App.vue)
+- Компоненты секций/блоков: `src/components/*`
+- Главный файл стилей: [src/styles/main.scss](src/styles/main.scss)
+- Базовые стили: `src/styles/base/*`
+- Лейаут: `src/styles/layout/*`
+- Стили компонентов (отдельно, БЭМ): `src/styles/components/*`
 - Точка входа приложения: [src/main.ts](src/main.ts)

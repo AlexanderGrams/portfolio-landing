@@ -1,0 +1,26 @@
+﻿.page {
+  min-height: 100dvh;
+  background: var(--color-bg);
+  color: var(--color-text);
+}
+
+.page__hero {
+  min-height: 100dvh;
+  background:
+    radial-gradient(circle at top right, rgba(14, 116, 144, 0.28), transparent 45%),
+    radial-gradient(circle at top left, rgba(63, 63, 70, 0.36), transparent 50%),
+    linear-gradient(180deg, var(--color-bg) 0%, var(--color-surface) 100%);
+}
+
+.page__container {
+  width: 100%;
+  max-width: var(--content-max-width);
+  margin: 0 auto;
+  padding-left: var(--space-page-x);
+  padding-right: var(--space-page-x);
+}
+
+.page__main {
+  padding-top: var(--space-section-y);
+  padding-bottom: var(--space-section-y);
+}
