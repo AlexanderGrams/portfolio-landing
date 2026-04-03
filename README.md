@@ -1,5 +1,38 @@
-# Vue 3 + TypeScript + Vite
+# Portfolio Landing
 
-This template should help get you started developing with Vue 3 and TypeScript in Vite. The template uses Vue 3 `<script setup>` SFCs, check out the [script setup docs](https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup) to learn more.
+Сайт-визитка (портфолио) продуктового дизайнера на Vue 3 + TypeScript + Vite.
+Сейчас это каркас с базовой структурой секций и стилями.
 
-Learn more about the recommended Project Setup and IDE Support in the [Vue Docs TypeScript Guide](https://vuejs.org/guide/typescript/overview.html#project-setup).
+## Stack
+
+- Vue 3 (`<script setup>`)
+- TypeScript
+- Vite
+- Tailwind CSS 4
+- SCSS
+
+## Scripts
+
+- `npm run dev` - локальный запуск
+- `npm run lint` - проверка ESLint
+- `npm run typecheck` - проверка TypeScript/Vue типов (`vue-tsc --noEmit`)
+- `npm run build` - production build
+- `npm run preview` - локальный preview build
+
+## Deployment
+
+Проект деплоится на GitHub Pages через workflow:
+[.github/workflows/pages.yml](.github/workflows/pages.yml)
+
+CI перед деплоем запускает:
+
+1. `npm run lint`
+2. `npm run typecheck`
+3. `npm run build` (с `VITE_BASE=/portfolio-landing/`)
+
+## Где менять контент
+
+- Основная структура страницы: [src/App.vue](src/App.vue)
+- Глобальные стили: [src/styles/main.scss](src/styles/main.scss)
+- Tailwind import: [src/styles/tailwind.css](src/styles/tailwind.css)
+- Точка входа приложения: [src/main.ts](src/main.ts)
