@@ -10,6 +10,7 @@ body {
 
 body {
   margin: 0;
+  font-family: var(--font-ui);
 
   /* важное: чтобы “черный сайт” был реально черным везде */
   background: #09090b; /* zinc-950 */
