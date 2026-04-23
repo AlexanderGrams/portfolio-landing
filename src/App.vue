@@ -7,9 +7,12 @@
       </div>
     </section>
 
-    <main class="page__main page__container">
+    <main class="page__main">
       <ProjectsSection />
-      <ResumeSection />
+
+      <div class="page__container">
+        <ResumeSection />
+      </div>
     </main>
 
     <div class="page__container">

@@ -1,4 +1,4 @@
-﻿<template>
+<template>
   <section class="hero-section" aria-labelledby="hero-title">
     <div class="hero-section__content">
       <h1 id="hero-title" class="hero-section__title">
@@ -12,14 +12,18 @@
         От идеи и прототипа до макетов, которые удобно внедрять в разработку
       </p>
 
-      <a
+      <BaseButtonLink
         class="hero-section__cta"
         href="https://t.me/..."
         target="_blank"
         rel="noreferrer"
       >
         Написать в Telegram
-      </a>
+      </BaseButtonLink>
     </div>
   </section>
 </template>
+
+<script setup lang="ts">
+import BaseButtonLink from "@components/BaseButtonLink.vue";
+</script>
