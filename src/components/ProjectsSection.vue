@@ -42,22 +42,22 @@
 import BaseButtonLink from "@components/BaseButtonLink.vue";
 import PhoneFrame from "@components/PhoneFrame.vue";
 
-import darkScreen from "@assets/phone-screen-dark.svg";
-import grayScreen from "@assets/phone-screen-gray.svg";
+import checkoutScreen from "@assets/screens/kolobox/kolobox-checkout-screen.png";
+import homeScreen from "@assets/screens/kolobox/kolobox-home-screen.png";
 import yellowScreen from "@assets/phone-screen-yellow.svg";
 
 const galleryScreens = [
+  {
+    src: homeScreen,
+    alt: "Экран главной страницы KOLOBOX",
+  },
   {
     src: yellowScreen,
     alt: "Желтый экран телефона",
   },
   {
-    src: grayScreen,
-    alt: "Серый экран телефона",
-  },
-  {
-    src: darkScreen,
-    alt: "Темный экран телефона",
+    src: checkoutScreen,
+    alt: "Экран оформления заказа KOLOBOX",
   },
 ];
 </script>
