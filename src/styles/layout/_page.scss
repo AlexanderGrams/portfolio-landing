@@ -1,0 +1,19 @@
+﻿.page {
+  min-height: 100dvh;
+  background: var(--color-bg);
+  color: var(--color-text);
+}
+
+.page__hero {
+  min-height: 100dvh;
+  background: -webkit-linear-gradient(130deg, #0b0b10, #200b0b);
+  background: linear-gradient(130deg, #0b0b10, #200b0b);
+}
+
+.page__container {
+  width: 100%;
+  max-width: var(--content-max-width);
+  margin: 0 auto;
+  padding-left: var(--space-page-x);
+  padding-right: var(--space-page-x);
+}
