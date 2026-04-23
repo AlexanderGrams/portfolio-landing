@@ -44,7 +44,7 @@ import PhoneFrame from "@components/PhoneFrame.vue";
 
 import checkoutScreen from "@assets/screens/kolobox/kolobox-checkout-screen.png";
 import homeScreen from "@assets/screens/kolobox/kolobox-home-screen.png";
-import yellowScreen from "@assets/phone-screen-yellow.svg";
+import splashScreen from "@assets/screens/kolobox/kolobox-splash-screen.png";
 
 const galleryScreens = [
   {
@@ -52,8 +52,8 @@ const galleryScreens = [
     alt: "Экран главной страницы KOLOBOX",
   },
   {
-    src: yellowScreen,
-    alt: "Желтый экран телефона",
+    src: splashScreen,
+    alt: "Экран заставки KOLOBOX",
   },
   {
     src: checkoutScreen,
