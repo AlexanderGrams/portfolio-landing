@@ -23,6 +23,7 @@
           v-for="screen in galleryScreens"
           :key="screen.alt"
           class="projects-section__gallery-phone"
+          width="280px"
           :src="screen.src"
           :alt="screen.alt"
         />
