@@ -4,12 +4,19 @@
 
 .projects-section__slide {
   width: 100%;
+  background: #222224;
+}
+
+.projects-section__content {
+  width: 100%;
   max-width: var(--content-max-width);
   margin: 0 auto;
-  overflow: hidden;
-  padding: 68px 120px;
-  border-radius: 32px;
-  background: #222224;
+  padding-left: var(--space-page-x);
+  padding-right: var(--space-page-x);
+}
+
+.projects-section__copy {
+  padding-top: 68px;
 }
 
 .projects-section__tag {
@@ -45,46 +52,12 @@
   color: var(--color-text);
 }
 
-.projects-section__gallery-placeholder {
-  position: relative;
-  display: flex;
-  align-items: flex-end;
-  justify-content: center;
-  min-height: 398px;
-  margin-top: 48px;
-  padding: 44px 24px;
-  border-radius: 28px;
-  background: #030303;
-}
-
-.projects-section__gallery-phone {
-  position: relative;
-  flex: 0 0 auto;
-  will-change: transform;
-}
-
-.projects-section__gallery-phone--left,
-.projects-section__gallery-phone--right {
-  z-index: 1;
-}
-
-.projects-section__gallery-phone--center {
-  z-index: 3;
-}
-
-.projects-section__phone-logo-animation {
-  box-sizing: border-box;
-  width: 100%;
-  height: 100%;
-  padding-top: calc(53 * var(--phone-scale) * 1px);
-  padding-bottom: calc(34 * var(--phone-scale) * 1px);
-}
-
 .projects-section__footer {
   display: flex;
   align-items: center;
   justify-content: flex-start;
-  margin-top: 16px;
+  padding-top: 16px;
+  padding-bottom: 68px;
 }
 
 .projects-section__button {

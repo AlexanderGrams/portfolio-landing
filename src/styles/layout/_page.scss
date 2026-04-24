@@ -10,10 +10,14 @@
   // background: linear-gradient(130deg, #0b0b10, #200b0b);
 }
 
+.page__main {
+  border-radius: 40px;
+  overflow: hidden;
+  background: #222224;
+}
+
 .page__container {
   width: 100%;
   max-width: var(--content-max-width);
   margin: 0 auto;
-  padding-left: var(--space-page-x);
-  padding-right: var(--space-page-x);
 }
