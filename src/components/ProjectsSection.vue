@@ -18,11 +18,16 @@
         </p>
       </div>
 
-      <div class="projects-section__gallery-placeholder" aria-hidden="true">
+      <div
+        ref="galleryRef"
+        class="projects-section__gallery-placeholder"
+        aria-hidden="true"
+      >
         <PhoneFrame
-          v-for="screen in galleryScreens"
+          v-for="(screen, index) in galleryScreens"
           :key="screen.alt"
           class="projects-section__gallery-phone"
+          :class="`projects-section__gallery-phone--${screenPositions[index]}`"
           width="280px"
           :src="screen.src"
           :alt="screen.alt"
@@ -39,12 +44,21 @@
 </template>
 
 <script setup lang="ts">
+import { onBeforeUnmount, onMounted, ref } from "vue";
+import gsap from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+
 import BaseButtonLink from "@components/BaseButtonLink.vue";
 import PhoneFrame from "@components/PhoneFrame.vue";
 
 import checkoutScreen from "@assets/screens/kolobox/kolobox-checkout-screen.png";
 import homeScreen from "@assets/screens/kolobox/kolobox-home-screen.png";
 import splashScreen from "@assets/screens/kolobox/kolobox-splash-screen.png";
+
+const galleryRef = ref<HTMLElement | null>(null);
+const screenPositions = ["left", "center", "right"] as const;
+let galleryAnimationContext: gsap.Context | null = null;
+let galleryScrollTrigger: ScrollTrigger | null = null;
 
 const galleryScreens = [
   {
@@ -60,4 +74,89 @@ const galleryScreens = [
     alt: "Экран оформления заказа KOLOBOX",
   },
 ];
+
+onMounted(() => {
+  if (!galleryRef.value) {
+    return;
+  }
+
+  gsap.registerPlugin(ScrollTrigger);
+
+  galleryAnimationContext = gsap.context(() => {
+    const leftPhone = galleryRef.value?.querySelector(
+      ".projects-section__gallery-phone--left",
+    );
+    const rightPhone = galleryRef.value?.querySelector(
+      ".projects-section__gallery-phone--right",
+    );
+
+    if (!leftPhone || !rightPhone) {
+      return;
+    }
+
+    gsap.set(leftPhone, {
+      x: 212,
+      y: 22,
+    });
+
+    gsap.set(rightPhone, {
+      x: -212,
+      y: 22,
+    });
+
+    const timeline = gsap.timeline({
+      scrollTrigger: {
+        trigger: galleryRef.value,
+        start: "top 78%",
+        end: "center center",
+        scrub: true,
+        onLeave: (self) => {
+          gsap.set(leftPhone, {
+            x: -32,
+            y: 0,
+          });
+
+          gsap.set(rightPhone, {
+            x: 32,
+            y: 0,
+          });
+
+          self.kill(false);
+          galleryScrollTrigger = null;
+        },
+      },
+    });
+
+    galleryScrollTrigger = timeline.scrollTrigger ?? null;
+
+    timeline
+      .to(
+        leftPhone,
+        {
+          x: -32,
+          y: 0,
+          ease: "none",
+        },
+        0,
+      )
+      .to(
+        rightPhone,
+        {
+          x: 32,
+          y: 0,
+          ease: "none",
+        },
+        0,
+      );
+  }, galleryRef);
+
+  ScrollTrigger.refresh();
+});
+
+onBeforeUnmount(() => {
+  galleryScrollTrigger?.kill();
+  galleryScrollTrigger = null;
+  galleryAnimationContext?.revert();
+  galleryAnimationContext = null;
+});
 </script>

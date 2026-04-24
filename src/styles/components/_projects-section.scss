@@ -46,15 +46,30 @@
 }
 
 .projects-section__gallery-placeholder {
+  position: relative;
   display: flex;
   align-items: flex-end;
   justify-content: center;
-  gap: 33px;
   min-height: 398px;
   margin-top: 48px;
   padding: 44px 24px;
   border-radius: 28px;
   background: #030303;
+}
+
+.projects-section__gallery-phone {
+  position: relative;
+  flex: 0 0 auto;
+  will-change: transform;
+}
+
+.projects-section__gallery-phone--left,
+.projects-section__gallery-phone--right {
+  z-index: 1;
+}
+
+.projects-section__gallery-phone--center {
+  z-index: 3;
 }
 
 .projects-section__footer {
@@ -67,4 +82,7 @@
 .projects-section__button {
   padding: 0 16px;
   font-size: 0.94rem;
+}
+
+@media (prefers-reduced-motion: reduce) {
 }
