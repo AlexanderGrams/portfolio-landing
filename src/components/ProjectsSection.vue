@@ -23,15 +23,22 @@
         class="projects-section__gallery-placeholder"
         aria-hidden="true"
       >
-        <PhoneFrame
-          v-for="(screen, index) in galleryScreens"
-          :key="screen.alt"
-          class="projects-section__gallery-phone"
-          :class="`projects-section__gallery-phone--${screenPositions[index]}`"
-          width="280px"
-          :src="screen.src"
-          :alt="screen.alt"
-        />
+          <PhoneFrame
+            v-for="(screen, index) in galleryScreens"
+            :key="screen.alt"
+            class="projects-section__gallery-phone"
+            :class="`projects-section__gallery-phone--${screenPositions[index]}`"
+            width="280px"
+            :src="screen.src"
+            :alt="screen.alt"
+          >
+            <div
+              v-if="screenPositions[index] === 'center'"
+              class="projects-section__phone-logo-animation"
+            >
+              <KoloboxLogoAnimation />
+            </div>
+          </PhoneFrame>
       </div>
 
       <div class="projects-section__footer">
@@ -49,6 +56,7 @@ import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 import BaseButtonLink from "@components/BaseButtonLink.vue";
+import KoloboxLogoAnimation from "@components/KoloboxLogoAnimation.vue";
 import PhoneFrame from "@components/PhoneFrame.vue";
 
 import checkoutScreen from "@assets/screens/kolobox/kolobox-checkout-screen.png";

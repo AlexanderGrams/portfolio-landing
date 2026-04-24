@@ -1,0 +1,62 @@
+.kolobox-logo-animation {
+  --kolobox-logo-scale: var(--phone-scale, 1);
+  --kolobox-logo-character-base-width: 107;
+  --kolobox-logo-box-base-width: 93;
+  --kolobox-logo-base-gap: 3;
+  --kolobox-logo-base-float-distance: 14;
+  --kolobox-logo-float-duration: 2.2s;
+
+  display: flex;
+  width: 100%;
+  height: 100%;
+  align-items: center;
+  justify-content: center;
+  pointer-events: none;
+}
+
+.kolobox-logo-animation__stack {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: calc(var(--kolobox-logo-base-gap) * var(--kolobox-logo-scale) * 1px);
+}
+
+.kolobox-logo-animation__character,
+.kolobox-logo-animation__box {
+  display: block;
+  height: auto;
+}
+
+.kolobox-logo-animation__character {
+  width: calc(
+    var(--kolobox-logo-character-base-width) * var(--kolobox-logo-scale) * 1px
+  );
+  transform: translateY(0);
+  animation: kolobox-logo-float var(--kolobox-logo-float-duration) ease-in-out
+    infinite;
+}
+
+.kolobox-logo-animation__box {
+  width: calc(
+    var(--kolobox-logo-box-base-width) * var(--kolobox-logo-scale) * 1px
+  );
+}
+
+@keyframes kolobox-logo-float {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(
+      calc(var(--kolobox-logo-base-float-distance) * var(--kolobox-logo-scale) * -1px)
+    );
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .kolobox-logo-animation__character {
+    animation: none;
+  }
+}
