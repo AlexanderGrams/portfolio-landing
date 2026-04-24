@@ -108,8 +108,8 @@ onMounted(() => {
       scrollTrigger: {
         trigger: galleryRef.value,
         start: "top 78%",
-        end: "center center",
-        scrub: true,
+        end: "top 40%",
+        scrub: 0,
         onLeave: (self) => {
           gsap.set(leftPhone, {
             x: -32,
