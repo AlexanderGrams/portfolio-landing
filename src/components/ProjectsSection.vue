@@ -21,19 +21,10 @@
       </div>
 
       <ProjectsSectionSlider />
-
-      <div class="projects-section__content">
-        <div class="projects-section__footer">
-          <BaseButtonLink class="projects-section__button" href="#resume">
-            Открыть Figma
-          </BaseButtonLink>
-        </div>
-      </div>
     </article>
   </section>
 </template>
 
 <script setup lang="ts">
-import BaseButtonLink from "@components/BaseButtonLink.vue";
 import ProjectsSectionSlider from "@components/ProjectsSectionSlider.vue";
 </script>

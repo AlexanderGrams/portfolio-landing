@@ -52,18 +52,5 @@
   color: var(--color-text);
 }
 
-.projects-section__footer {
-  display: flex;
-  align-items: center;
-  justify-content: flex-start;
-  padding-top: 16px;
-  padding-bottom: 68px;
-}
-
-.projects-section__button {
-  padding: 0 16px;
-  font-size: 0.94rem;
-}
-
 @media (prefers-reduced-motion: reduce) {
 }
