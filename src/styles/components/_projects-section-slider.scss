@@ -5,6 +5,7 @@
 
   width: 100%;
   margin-top: 48px;
+  margin-bottom: 60px;
 }
 
 .projects-section-slider__focus {
@@ -101,7 +102,9 @@
   background: #fff;
 }
 
-.projects-section-slider__dot:not(.projects-section-slider__dot--active):hover::before {
+.projects-section-slider__dot:not(
+    .projects-section-slider__dot--active
+  ):hover::before {
   background: #b8b8bc;
   box-shadow: 0 0 0 4px rgba(184, 184, 188, 0.08);
 }
