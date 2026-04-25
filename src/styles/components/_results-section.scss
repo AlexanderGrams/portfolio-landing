@@ -1,0 +1,29 @@
+.results-section {
+  padding-top: 60px;
+  width: 100%;
+}
+
+.results-section__header {
+  width: 100%;
+  max-width: var(--content-max-width);
+  margin: 0 auto 24px;
+  padding: 0 120px;
+}
+
+.results-section__title {
+  margin: 0;
+  font-family: var(--font-heading);
+  font-size: 52px;
+  font-weight: 600;
+  line-height: 1.38;
+  color: #fff;
+}
+
+.results-section__item {
+  width: 100%;
+  min-height: 636px;
+}
+
+.results-section__item--alt {
+  background: #191919;
+}
